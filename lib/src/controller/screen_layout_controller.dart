@@ -26,7 +26,7 @@ class ScreenLayoutController extends GetxController {
       _screenType(ScreenSizeType.DESKTOP);
       // print("피씨");
     }
-
+    // 현재 전체 사이즈값 확인
     // print(constraints.biggest.width);
   }
 

@@ -27,6 +27,9 @@ class HomePageMain extends StatelessWidget {
               child: Column(
                 children: [
                   Header(ScreenLayoutController.to.type.value),
+                  Expanded(
+                      child: Contents(ScreenLayoutController.to.type.value)),
+                  Fotter(ScreenLayoutController.to.type.value),
                 ],
               ),
             ),
