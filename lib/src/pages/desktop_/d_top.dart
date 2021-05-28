@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:flutter_webapp_chart/src/components/dropdown_button_widget.dart';
+import 'package:get/get_state_manager/get_state_manager.dart';
 
 class DeskTop extends StatelessWidget {
 //공통 마진
+
   Widget _makeMargin(Widget widget) {
     return Container(
       margin: const EdgeInsets.all(5),
@@ -10,7 +13,6 @@ class DeskTop extends StatelessWidget {
     );
   }
 
-//공통 버튼
   Widget _makeButton(Widget widget) {
     return MaterialButton(
       onPressed: () {},
@@ -33,6 +35,21 @@ class DeskTop extends StatelessWidget {
         children: [
           Row(
             children: [
+              DropdownButtonWidget(),
+              Obx(
+                () {
+                  //   switch (controller.index.value) {
+                  //     case :
+
+                  //       break;
+                  //     default:
+
+                  //  return Text("sdsaad");
+                },
+              ),
+              Center(
+                  //  child: Text("page$index"),
+                  ),
               _makeMargin(_makeButton(Icon(
                 Icons.border_color,
                 size: 15,

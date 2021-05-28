@@ -27,7 +27,7 @@ class Fotter extends GetView<ScreenLayoutController> {
   @override
   Widget build(BuildContext context) {
     // print("heard");
-    print(screenSizeType);
+    //  print(screenSizeType);
     switch (screenSizeType) {
       case ScreenSizeType.MOBILE:
         return _mobileLayout();

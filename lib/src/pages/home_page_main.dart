@@ -6,7 +6,6 @@ import 'package:flutter_webapp_chart/src/controller/screen_layout_controller.dar
 import 'package:get/get.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 
-// 처음화면
 class HomePageMain extends StatelessWidget {
   HomePageMain();
   @override
@@ -39,10 +38,3 @@ class HomePageMain extends StatelessWidget {
     );
   }
 }
-// Obx((
-
-// )=> Get.find<ScreenLayoutController>().type.value)
-
-// Header(ScreenLayoutController.to.type.value),
-// Contents(ScreenLayoutController.to.type.value),
-// Footer(),

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_webapp_chart/src/components/dropdown_button_widget.dart';
+import 'package:flutter_webapp_chart/src/controller/dropdown_button_controller.dart';
 import 'package:flutter_webapp_chart/src/controller/screen_layout_controller.dart';
 import 'package:flutter_webapp_chart/src/pages/home_page_main.dart';
 import 'package:get/get.dart';
@@ -18,6 +20,7 @@ class MyApp extends StatelessWidget {
       ),
       initialBinding: BindingsBuilder(() {
         Get.put(ScreenLayoutController());
+        Get.put(DropdownButtonController());
       }),
       home: HomePageMain(),
     );
