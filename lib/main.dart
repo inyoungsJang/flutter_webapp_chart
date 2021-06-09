@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_webapp_chart/src/components/dropdown_button_widget.dart';
+import 'package:flutter_webapp_chart/src/components/screen_one.dart';
+import 'package:flutter_webapp_chart/src/components/screen_two.dart';
 import 'package:flutter_webapp_chart/src/controller/dropdown_button_controller.dart';
 import 'package:flutter_webapp_chart/src/controller/screen_layout_controller.dart';
 import 'package:flutter_webapp_chart/src/pages/home_page_main.dart';
@@ -23,6 +25,13 @@ class MyApp extends StatelessWidget {
         Get.put(DropdownButtonController());
       }),
       home: HomePageMain(),
+      getPages: [
+        GetPage(
+            name: '/',
+            page: () => ScreenOne(ScreenLayoutController.to.type.value)),
+        GetPage(name: '/screentwo', page: () => ScreenTwo()),
+        //GetPage(name: '/three', page: ScreenThree())
+      ],
     );
   }
 }

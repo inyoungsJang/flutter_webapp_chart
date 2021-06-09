@@ -4,6 +4,7 @@ class MobileTop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      color: Colors.blue,
       child: Row(
         children: [
           TextButton(

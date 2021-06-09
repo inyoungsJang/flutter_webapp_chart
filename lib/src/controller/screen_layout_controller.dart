@@ -35,7 +35,7 @@ class ScreenLayoutController extends GetxController {
   void onInit() {
     debounce(_screenType, (_) {
       type(_screenType.value);
-    }, time: Duration(milliseconds: 200));
+    }, time: Duration(microseconds: 200));
     super.onInit();
   }
 }

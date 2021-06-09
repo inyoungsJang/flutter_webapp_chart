@@ -3,26 +3,44 @@ import 'package:flutter_webapp_chart/src/controller/dropdown_button_controller.d
 import 'package:get/get_state_manager/get_state_manager.dart';
 
 class DropdownButtonWidget extends GetView<DropdownButtonController> {
+  final bool isExpanded;
+  DropdownButtonWidget({Key key, this.isExpanded = false}) : super(key: key);
+
+  Widget _makeButton(Widget widget) {
+    return MaterialButton(
+      onPressed: () {},
+      minWidth: 1,
+      shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(5),
+          side: BorderSide(width: 1.0, color: Colors.grey)),
+      child: widget,
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
-    //   return Obx(
-    //     () => (DropdownButton(
-    //   //    value: controller.index.value,
-    //   value: controller.cu,
-    //       onChanged: (int value) {
-    //         controller.changeDropdownMenu(value);
-    //       },
-    //       items: [
-    //         DropdownMenuItem(
-    //           value: 0,
-    //           child: Text("item1"),
-    //         ),
-    //         DropdownMenuItem(
-    //           value: 1,
-    //           child: Text("item2"),
-    //         ),
-    //       ],
-    //     )),
-    //   );
+    return Obx(
+      () => _makeButton(
+        DropdownButton(
+          value: controller.currentItem.value.index,
+          onChanged: (int value) {
+            controller.changeDropDownMenu(value);
+          },
+          underline: Container(padding: const EdgeInsets.all(0)),
+          isExpanded: isExpanded,
+          items: DropDownMenu.values
+              .map(
+                (menu) => DropdownMenuItem(
+                  value: menu.index,
+                  child: Text(
+                    menu.name,
+                    style: TextStyle(fontSize: 11),
+                  ),
+                ),
+              )
+              .toList(),
+        ),
+      ),
+    );
   }
 }
